@@ -27,3 +27,11 @@ resource "aws_instance" "test_server2" {
         Name = "LearnServer2"
     }
 }
+
+resource "aws_instance" "test_server3" {
+    ami = "ami-830c94e3"
+    instance_type = "t2.micro"
+    tags = {
+        Name = var.instance_name
+    }
+}
